@@ -1,0 +1,26 @@
+services:
+  back:
+    build:
+      context: ./back
+    volumes:
+      - ./back/src:/app/src
+    ports:
+      - "5000:5000"
+    networks:
+      - project_network
+
+  front:
+    build:
+      context: ./front
+    volumes:
+      - ./front/src:/app/src
+    ports:
+      - "3000:3000"
+    depends_on:
+      - back
+    networks:
+      - project_network
+
+networks:
+  project_network:
+    driver: bridge

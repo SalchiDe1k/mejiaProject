@@ -1,0 +1,9 @@
+Flask
+Flask-Cors
+Flask-SQLAlchemy
+Flask-Migrate
+numpy
+pandas
+openpyxl
+Werkzeug
+fpdf==1.7.2
